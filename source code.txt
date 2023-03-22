@@ -1,0 +1,1016 @@
+#RESTAURANT MANAGEMENT SYSTEM
+
+from tkinter import*
+import random
+import time
+from tkinter import filedialog, messagebox
+import requests
+#functions
+
+
+def roti():
+    if var1.get() == 1:
+        text_roti.config(state=NORMAL)
+        text_roti.delete(0, END)
+        text_roti.focus()
+    else:
+        text_roti.config(state=DISABLED)
+        e_roti.set('0')
+
+
+def daal():
+    if var2.get() == 1:
+        text_daal.config(state=NORMAL)
+        text_daal.delete(0, END)
+        text_daal.focus()
+
+    else:
+        text_daal.config(state=DISABLED)
+        e_daal.set('0')
+
+
+def fish():
+    if var3.get() == 1:
+        text_fish.config(state=NORMAL)
+        text_fish.delete(0, END)
+        text_fish.focus()
+
+    else:
+        text_fish.config(state=DISABLED)
+        e_fish.set('0')
+
+
+def sabji():
+    if var4.get() == 1:
+        text_sabji.config(state=NORMAL)
+        text_sabji.focus()
+        text_sabji.delete(0, END)
+    elif var4.get() == 0:
+        text_sabji.config(state=DISABLED)
+        e_sabji.set('0')
+
+
+def kebab():
+    if var5.get() == 1:
+        text_kebab.config(state=NORMAL)
+        text_kebab.focus()
+        text_kebab.delete(0, END)
+    elif var5.get() == 0:
+        text_kebab.config(state=DISABLED)
+        e_kebab.set('0')
+
+
+def chawal():
+    if var6.get() == 1:
+        text_chawal.config(state=NORMAL)
+        text_chawal.focus()
+        text_chawal.delete(0, END)
+    elif var6.get() == 0:
+        text_chawal.config(state=DISABLED)
+        e_chawal.set('0')
+
+
+def mutton():
+    if var7.get() == 1:
+        text_mutton.config(state=NORMAL)
+        text_mutton.focus()
+        text_mutton.delete(0, END)
+    elif var7.get() == 0:
+        text_mutton.config(state=DISABLED)
+        e_mutton.set('0')
+
+
+def paneer():
+    if var8.get() == 1:
+        text_paneer.config(state=NORMAL)
+        text_paneer.focus()
+        text_paneer.delete(0, END)
+    elif var8.get() == 0:
+        text_paneer.config(state=DISABLED)
+        e_paneer.set('0')
+
+
+def chicken():
+    if var9.get() == 1:
+        text_chicken.config(state=NORMAL)
+        text_chicken.focus()
+        text_chicken.delete(0, END)
+    elif var9.get() == 0:
+        text_chicken.config(state=DISABLED)
+        e_chicken.set('0')
+
+
+def lassi():
+    if var10.get() == 1:
+        text_lassi.config(state=NORMAL)
+        text_lassi.focus()
+        text_lassi.delete(0, END)
+    elif var10.get() == 0:
+        text_lassi.config(state=DISABLED)
+        e_lassi.set('0')
+
+
+def coffee():
+    if var11.get() == 1:
+        text_coffee.config(state=NORMAL)
+        text_coffee.focus()
+        text_coffee.delete(0, END)
+    elif var11.get() == 0:
+        text_coffee.config(state=DISABLED)
+        e_coffee.set('0')
+
+
+def faluda():
+    if var12.get() == 1:
+        text_faluda.config(state=NORMAL)
+        text_faluda.focus()
+        text_faluda.delete(0, END)
+    elif var12.get() == 0:
+        text_faluda.config(state=DISABLED)
+        e_faluda.set('0')
+
+
+def lemonade():
+    if var13.get() == 1:
+        text_lemonade.config(state=NORMAL)
+        text_lemonade.focus()
+        text_lemonade.delete(0, END)
+    elif var13.get() == 0:
+        text_lemonade.config(state=DISABLED)
+        e_lemonade.set('0')
+
+
+def jaljeera():
+    if var14.get() == 1:
+        text_jaljeera.config(state=NORMAL)
+        text_jaljeera.focus()
+        text_jaljeera.delete(0, END)
+    elif var14.get() == 0:
+        text_jaljeera.config(state=DISABLED)
+        e_jaljeera.set('0')
+
+
+def roohafza():
+    if var15.get() == 1:
+        text_roohafza.config(state=NORMAL)
+        text_roohafza.focus()
+        text_roohafza.delete(0,END)
+    elif var15.get() == 0:
+        text_roohafza.config(state=DISABLED)
+        e_roohafza.set('0')
+
+
+def masala_tea():
+    if var16.get() == 1:
+        text_masala_tea.config(state=NORMAL)
+        text_masala_tea.focus()
+        text_masala_tea.delete(0, END)
+    elif var16.get() == 0:
+        text_masala_tea.config(state=DISABLED)
+        e_masala_tea.set('0')
+
+
+def badam_milk():
+    if var17.get() == 1:
+        text_badammilk.config(state=NORMAL)
+        text_badammilk.focus()
+        text_badammilk.delete(0, END)
+    elif var17.get() == 0:
+        text_badammilk.config(state=DISABLED)
+        e_badammilk.set('0')
+
+
+def cold_drinks():
+    if var18.get() == 1:
+        text_cold_drinks.config(state=NORMAL)
+        text_cold_drinks.focus()
+        text_cold_drinks.delete(0, END)
+    elif var18.get() == 0:
+        text_cold_drinks.config(state=DISABLED)
+        e_cold_drinks.set('0')
+
+
+def oreo():
+    if var19.get() == 1:
+        text_oreo.config(state=NORMAL)
+        text_oreo.focus()
+        text_oreo.delete(0, END)
+    elif var19.get() == 0:
+        text_oreo.config(state=DISABLED)
+        e_oreo.set('0')
+
+
+def apple():
+    if var20.get() == 1:
+        text_apple.config(state=NORMAL)
+        text_apple.focus()
+        text_apple.delete(0, END)
+    elif var20.get() == 0:
+        text_apple.config(state=DISABLED)
+        e_apple.set('0')
+
+
+def kitkat():
+    if var21.get() == 1:
+        text_kitkat.config(state=NORMAL)
+        text_kitkat.focus()
+        text_kitkat.delete(0, END)
+    elif var21.get() == 0:
+        text_kitkat.config(state=DISABLED)
+        e_kitkat.set('0')
+
+
+def vanilla():
+    if var22.get() == 1:
+        text_vanilla.config(state=NORMAL)
+        text_vanilla.focus()
+        text_vanilla.delete(0, END)
+    elif var22.get() == 0:
+        text_vanilla.config(state=DISABLED)
+        e_vanilla.set('0')
+
+
+def banana():
+    if var23.get() == 1:
+        text_banana.config(state=NORMAL)
+        text_banana.focus()
+        text_banana.delete(0, END)
+    elif var23.get() == 0:
+        text_banana.config(state=DISABLED)
+        e_banana.set('0')
+
+
+def red_valvet():
+    if var24.get() == 1:
+        text_red_valvet.config(state=NORMAL)
+        text_red_valvet.focus()
+        text_red_valvet.delete(0, END)
+    elif var24.get() == 0:
+        text_red_valvet.config(state=DISABLED)
+        e_red_valvet.set('0')
+
+
+def pineapple():
+    if var25.get() == 1:
+        text_pineapple.config(state=NORMAL)
+        text_pineapple.focus()
+        text_pineapple.delete(0, END)
+    elif var25.get() == 0:
+        text_pineapple.config(state=DISABLED)
+        e_pineapple.set('0')
+
+
+def chocolate():
+    if var26.get() == 1:
+        text_chocolate.config(state=NORMAL)
+        text_chocolate.focus()
+        text_chocolate.delete(0, END)
+    elif var26.get() == 0:
+        text_chocolate.config(state=DISABLED)
+        e_chocolate.set('0')
+
+
+def black_forest():
+    if var27.get() == 1:
+        text_black_forest.config(state=NORMAL)
+        text_black_forest.focus()
+        text_black_forest.delete(0, END)
+    elif var27.get() == 0:
+        text_black_forest.config(state=DISABLED)
+        e_black_forest.set('0')
+
+#total cost function  is for total button
+
+
+def total_cost():
+    global price_of_Food, price_of_Drinks, price_of_Cakes, sub_total_of_Items
+    if var1.get()!=0 or var2.get()!=0 or var3.get()!=0 or var4.get()!=0 or var5.get()!=0 or var6.get()!=0 or var7.get()!=0 \
+        or var8.get()!=0 or var9.get()!=0 or var10.get()!=0 or var11.get()!=0 or var12.get()!=0 or var13.get()!=0 or var14.get()!=0 \
+      or  var15.get()!=0 or var16.get()!=0 or var17.get()!=0 or var18.get()!=0 or var19.get()!=0 or var20.get()!=0 or var21.get()!=0 \
+        or var22.get()!=0 or var23.get()!=0 or var24.get()!=0 or var25.get()!=0 or var26.get()!=0 or var27.get()!=0:
+        item1 = int(e_roti.get())
+        item2 = int(e_daal.get())
+        item3 = int(e_fish.get())
+        item4 = int(e_sabji.get())
+        item5 = int(e_kebab.get())
+        item6 = int(e_chawal.get())
+        item7 = int(e_mutton.get())
+        item8 = int(e_paneer.get())
+        item9 = int(e_chicken.get())
+
+        item10 = int(e_lassi.get())
+        item11 = int(e_coffee.get())
+        item12 = int(e_faluda.get())
+        item13 = int(e_lemonade.get())
+        item14 = int(e_jaljeera.get())
+        item15 = int(e_roohafza.get())
+        item16 = int(e_masala_tea.get())
+        item17 = int(e_badammilk.get())
+        item18 = int(e_cold_drinks.get())
+
+        item19 = int(e_oreo.get())
+        item20 = int(e_apple.get())
+        item21 = int(e_kitkat.get())
+        item22 = int(e_vanilla.get())
+        item23 = int(e_banana.get())
+        item24 = int(e_red_valvet.get())
+        item25 = int(e_pineapple.get())
+        item26 = int(e_chocolate.get())
+        item27 = int(e_black_forest.get())
+
+        price_of_Food = (item1 * 10) + (item2 * 60) + (item3 * 100) + (item4 * 50) + (item5 * 40) + (item6 * 30) + (item7 * 120) \
+                     + (item8 * 100) + (item9 * 120)
+
+        price_of_Drinks = (item10 * 50) + (item11 * 40) + (item12 * 80) + (item13 * 30) + (item14 * 40) + (item15 * 60) \
+                        + (item16 * 20) + (item17 * 50) + (item18 * 80)
+
+        price_of_Cakes = (item19 * 400) + (item20 * 300) + (item21 * 500) + (item22 * 550) + (item23 * 450) + (
+                item24 * 800) + (item25 * 620) + (item26 * 700) + (item27 * 550)
+
+        cost_of_food_var.set(str(price_of_Food) + ' Rs')
+        cost_of_drinks_var.set(str(price_of_Drinks) + ' Rs')
+        cost_of_cakes_var.set(str(price_of_Cakes) + ' Rs')
+
+        sub_total_of_Items = price_of_Food + price_of_Drinks + price_of_Cakes
+        sub_total_var.set(str(sub_total_of_Items) + ' Rs')
+
+        service_tax_var.set('50 Rs')
+
+        tottal_cost = sub_total_of_Items + 50
+        total_cost_var.set(str(tottal_cost) + ' Rs')
+    else:
+        messagebox.showerror('ERROR', 'No item is selected')
+
+
+def reset():
+    textReceipt.delete(1.0, END)
+    e_daal.set('0')
+    e_roti.set('0')
+    e_sabji.set('0')
+    e_fish.set('0')
+    e_kebab.set('0')
+    e_chawal.set('0')
+    e_mutton.set('0')
+    e_paneer.set('0')
+    e_chicken.set('0')
+
+    e_lassi.set('0')
+    e_coffee.set('0')
+    e_faluda.set('0')
+    e_roohafza.set('0')
+    e_lemonade.set('0')
+    e_jaljeera.set('0')
+    e_masala_tea.set('0')
+    e_badammilk.set('0')
+    e_cold_drinks.set('0')
+
+    e_kitkat.set('0')
+    e_oreo.set('0')
+    e_apple.set('0')
+    e_vanilla.set('0')
+    e_banana.set('0')
+    e_red_valvet.set('0')
+    e_pineapple.set('0')
+    e_chocolate.set('0')
+    e_black_forest.set('0')
+
+    text_roti.config(state=DISABLED)
+    text_daal.config(state=DISABLED)
+    text_sabji.config(state=DISABLED)
+    text_fish.config(state=DISABLED)
+    text_kebab.config(state=DISABLED)
+    text_paneer.config(state=DISABLED)
+    text_chicken.config(state=DISABLED)
+    text_mutton.config(state=DISABLED)
+    text_chawal.config(state=DISABLED)
+
+    text_lassi.config(state=DISABLED)
+    text_coffee.config(state=DISABLED)
+    text_jaljeera.config(state=DISABLED)
+    text_roohafza.config(state=DISABLED)
+    text_lemonade.config(state=DISABLED)
+    text_badammilk.config(state=DISABLED)
+    text_masala_tea.config(state=DISABLED)
+    text_faluda.config(state=DISABLED)
+    text_cold_drinks.config(state=DISABLED)
+
+    text_oreo.config(state=DISABLED)
+    text_apple.config(state=DISABLED)
+    text_kitkat.config(state=DISABLED)
+    text_vanilla.config(state=DISABLED)
+    text_banana.config(state=DISABLED)
+    text_red_valvet.config(state=DISABLED)
+    text_pineapple.config(state=DISABLED)
+    text_chocolate.config(state=DISABLED)
+    text_black_forest.config(state=DISABLED)
+
+    var1.set(0)
+    var2.set(0)
+    var3.set(0)
+    var4.set(0)
+    var5.set(0)
+    var6.set(0)
+    var7.set(0)
+    var8.set(0)
+    var9.set(0)
+    var10.set(0)
+    var11.set(0)
+    var12.set(0)
+    var13.set(0)
+    var14.set(0)
+    var15.set(0)
+    var16.set(0)
+    var17.set(0)
+    var18.set(0)
+    var19.set(0)
+    var20.set(0)
+    var21.set(0)
+    var22.set(0)
+    var23.set(0)
+    var24.set(0)
+    var25.set(0)
+    var26.set(0)
+    var27.set(0)
+
+    cost_of_drinks_var.set('')
+    cost_of_food_var.set('')
+    cost_of_cakes_var.set('')
+    sub_total_var.set('')
+    service_tax_var.set('')
+    total_cost_var.set('')
+def receipt():
+        global billnumber, date
+        if cost_of_food_var.get()!= '' or cost_of_cakes_var.get()!='' or cost_of_drinks_var.get()!='':
+            textReceipt.delete(1.0, END)
+            x = random.randint(100, 10000)
+            billnumber = 'BILL' + str(x)
+            date = time.strftime('%d/%m/%Y')
+            textReceipt.insert(END, 'Receipt Ref:\t\t' + billnumber + '\t\t' + date + '\n')
+            textReceipt.insert(END, '***************************************************************\n')
+            textReceipt.insert(END, 'Items:\t\t Cost Of Items(Rs)\n')
+            textReceipt.insert(END, '***************************************************************\n')
+            if e_roti.get() != '0':
+                textReceipt.insert(END, f'Roti\t\t\t{int(e_roti.get()) * 10}\n\n')
+
+            if e_daal.get() != '0':
+                textReceipt.insert(END, f'Daal\t\t\t{int(e_daal.get()) * 60}\n\n')
+
+            if e_fish.get() != '0':
+                textReceipt.insert(END, f'Fish\t\t\t{int(e_fish.get()) * 100}\n\n')
+
+            if e_chawal.get() != '0':
+                textReceipt.insert(END, f'Chawal:\t\t\t{int(e_chawal.get()) * 30}\n\n')
+
+            if e_sabji.get() != '0':
+                textReceipt.insert(END, f'Sabji:\t\t\t{int(e_sabji.get()) * 50}\n\n')
+
+            if e_paneer.get() != '0':
+                textReceipt.insert(END, f'Paneer:\t\t\t{int(e_paneer.get()) * 100}\n\n')
+
+            if e_kebab.get() != '0':
+                textReceipt.insert(END, f'Kebab:\t\t\t{int(e_kebab.get()) * 40}\n\n')
+
+            if e_chicken.get() != '0':
+                textReceipt.insert(END, f'Chicken:\t\t\t{int(e_chicken.get()) * 120}\n\n')
+
+            if e_mutton.get() != '0':
+                textReceipt.insert(END, f'Mutton:\t\t\t{int(e_mutton.get()) * 120}\n\n')
+
+            if e_lassi.get() != '0':
+                textReceipt.insert(END, f'Lassi:\t\t\t{int(e_lassi.get()) * 50}\n\n')
+
+            if e_coffee.get() != '0':
+                textReceipt.insert(END, f'Coffee:\t\t\t{int(e_coffee.get()) * 40}\n\n')
+
+            if e_faluda.get() != '0':
+                textReceipt.insert(END, f'Faluda:\t\t\t{int(e_faluda.get()) * 80}\n\n')
+
+            if e_lemonade.get() != '0':
+                textReceipt.insert(END, f'Lemonade:\t\t\t{int(e_lemonade.get()) * 30}\n\n')
+
+            if e_jaljeera.get() != '0':
+                textReceipt.insert(END, f'Jaljeera:\t\t\t{int(e_jaljeera.get()) * 40}\n\n')
+
+            if e_roohafza.get() != '0':
+                textReceipt.insert(END, f'Roohafza:\t\t\t{int(e_roohafza.get()) * 60}\n\n')
+
+            if e_masala_tea.get() != '0':
+                textReceipt.insert(END, f'Masala Chai:\t\t\t{int(e_masala_tea.get()) * 20}\n\n')
+
+            if e_badammilk.get() != '0':
+                textReceipt.insert(END, f'Badam Milk:\t\t\t{int(e_badammilk.get()) * 50}\n\n')
+
+            if e_cold_drinks.get() != '0':
+                textReceipt.insert(END, f'Cold Drinks:\t\t\t{int(e_cold_drinks.get()) * 80}\n\n')
+
+            if e_oreo.get() != '0':
+                textReceipt.insert(END, f'Oreo:\t\t\t{int(e_oreo.get()) * 400}\n\n')
+
+            if e_apple.get() != '0':
+                textReceipt.insert(END, f'Apple:\t\t\t{int(e_apple.get()) * 300}\n\n')
+
+            if e_kitkat.get() != '0':
+                textReceipt.insert(END, f'Kitkat:\t\t\t{int(e_kitkat.get()) * 500}\n\n')
+
+            if e_banana.get() != '0':
+                textReceipt.insert(END, f'Banana:\t\t\t{int(e_banana.get()) * 450}\n\n')
+
+            if e_red_valvet.get() != '0':
+                textReceipt.insert(END, f'Brownie:\t\t\t{int(e_red_valvet.get()) * 800}\n\n')
+
+            if e_pineapple.get() != '0':
+                textReceipt.insert(END, f'Pineapple:\t\t\t{int(e_pineapple.get()) * 620}\n\n')
+
+            if e_chocolate.get() != '0':
+                textReceipt.insert(END, f'Chocolate:\t\t\t{int(e_chocolate.get()) * 700}\n\n')
+
+            if e_black_forest.get() != '0':
+                textReceipt.insert(END, f'Black Forest:\t\t\t{int(e_black_forest.get()) * 550}\n\n')
+
+            if e_vanilla.get() != '0':
+                textReceipt.insert(END, f'Vanilla:\t\t\t{int(e_vanilla.get()) * 550}\n\n')
+
+            textReceipt.insert(END, '***************************************************************\n')
+            if cost_of_food_var.get() != '0 Rs':
+                textReceipt.insert(END, f'Cost Of Food\t\t\t{price_of_Food}Rs\n\n')
+            if cost_of_drinks_var.get() != '0 Rs':
+                textReceipt.insert(END, f'Cost Of Drinks\t\t\t{price_of_Drinks}Rs\n\n')
+            if cost_of_cakes_var.get() != '0 Rs':
+                textReceipt.insert(END, f'Cost Of Cakes\t\t\t{price_of_Cakes}Rs\n\n')
+
+            textReceipt.insert(END, f'Sub Total\t\t\t{sub_total_of_Items}Rs\n\n')
+            textReceipt.insert(END, f'Service Tax\t\t\t{50}Rs\n\n')
+            textReceipt.insert(END, f'Total Cost\t\t\t{sub_total_of_Items + 50}Rs\n\n')
+            textReceipt.insert(END, '***************************************************************\n')
+        else:
+            messagebox.showerror('ERROR', 'No item is selected')
+
+
+
+def save():
+    if textReceipt.get(1.0, END) == '\n':
+        pass
+    else:
+        url = filedialog.asksaveasfile(mode='w', defaultextension='.txt')
+        if url == NONE:
+            pass
+        else:
+            bill_data = textReceipt.get(1.0, END)
+            url.write(bill_data)
+            url.close()
+            messagebox.showinfo('Information', 'Your Bill Is Succesfully Saved')
+
+
+def send():
+    if textReceipt.get(1.0, END) == '\n':
+        pass
+    else:
+        def send_sms():
+            message = textarea.get(1.0, END)
+            number = numberfield.get()
+            auth = 'MwhroYQb4Z6KnDWp92XyBl1gLzs0aJGV5k7EjecxmPuvRHFfNTIyJdqOtFG41W8sxnm59bZ2aD0gkSMl'
+            url = 'https://www.fast2sms.com/dev/bulkV2'
+
+            params = {
+                'authorization' :'MwhroYQb4Z6KnDWp92XyBl1gLzs0aJGV5k7EjecxmPuvRHFfNTIyJdqOtFG41W8sxnm59bZ2aD0gkSMl'  ,
+            'route' : 'q',
+            'sender_id' : 'FTWSMS',
+            'message' : message,
+            'language' : "english",
+            'numbers' : number,
+            'flash' : "0"
+            }
+            response = requests.get(url, params=params)
+            dic = response.json()
+            result = dic.get('return')
+            if result is True:
+                messagebox.showinfo('Send Successfully', 'Message sent succesfully')
+
+            else:
+                messagebox.showerror('Error', 'Something went wrong')
+
+        root2 = Toplevel()
+
+        root2.title("Send Bill")
+        root2.config(bg='red4')
+        root2.geometry('485x620+50+50')
+
+        logoImage = PhotoImage(file='sender.png')
+        label = Label(root2, image=logoImage, bg='red4')
+        label.pack(pady=5)
+
+        numberLabel = Label(root2, text='Mobile Number', font=('arial', 18, 'bold underline'), bg='red4', fg='white')
+        numberLabel.pack(pady=5)
+
+        numberfield = Entry(root2, font=('helvetica', 22, 'bold'), bd=3, width=24)
+        numberfield.pack(pady=5)
+
+        billLabel = Label(root2, text='Bill Details', font=('arial', 18, 'bold underline'), bg='red4', fg='white')
+        billLabel.pack(pady=5)
+
+        textarea = Text(root2, font=('arial', 12, 'bold'), bd=3, width=42, height=14)
+        textarea.pack(pady=5)
+        textarea.insert(END, 'Receipt Ref:' + billnumber + '\n' + date + '\n\n')
+
+        if cost_of_food_var.get() != '0 Rs':
+            textarea.insert(END, f'Cost Of Food={price_of_Food}Rs\n')
+        if cost_of_drinks_var.get() != '0 Rs':
+            textarea.insert(END, f'Cost Of Drinks={price_of_Drinks}Rs\n')
+        if cost_of_cakes_var.get() != '0 Rs':
+            textarea.insert(END, f'Cost Of Cakes={price_of_Cakes}Rs\n')
+
+        textarea.insert(END, f'Sub Total={sub_total_of_Items}Rs\n')
+        textarea.insert(END, f'Service Tax={50}Rs\n')
+        textarea.insert(END, f'Total Cost={sub_total_of_Items + 50}Rs\n')
+
+        sendButton = Button(root2, text='SEND', font=('arial', 19, 'bold'), bg='white', fg='red4', bd=7, relief=GROOVE
+                            , command=send_sms)
+        sendButton.pack(pady=5)
+
+        root2.mainloop()
+
+root = Tk()
+
+
+root.geometry('1370x690+0+0')
+root.resizable(0, 0)
+root.title('Restaurant Management system created by Binary Beasts (Team - 14)')
+root.config(bg='firebrick4')
+topframe = Frame(root, bd=10, relief=RIDGE, bg='firebrick4')
+topframe.pack(side=TOP)
+LabelTitle = Label(topframe, text='Restaurant Management system', font=('areal', 30, 'bold'), fg='yellow', bd=9,
+                   bg='red4', width=51)
+LabelTitle.grid(row=0, column=0)
+
+#frames
+
+menu_frame = Frame(root, bd=10, relief=RIDGE, bg='firebrick4')
+menu_frame.pack(side=LEFT)
+
+cost_frame = Frame(menu_frame, bd=4, relief=RIDGE, bg='firebrick4', pady=10)
+cost_frame.pack(side=BOTTOM)
+
+food_frame = LabelFrame(menu_frame, text="Food", font=('arial', 19, 'bold'), bd=10, relief=RIDGE, fg='red4')
+food_frame.pack(side=LEFT)
+
+drinks_frame = LabelFrame(menu_frame, text='Drinks', font=('arial', 19, 'bold'), bd=10, relief=RIDGE,fg='red4')
+drinks_frame.pack(side=LEFT)
+
+cakes_frame = LabelFrame(menu_frame, text='cakes', font=('arial', 19, 'bold'), bd=10, relief=RIDGE, fg='red4')
+cakes_frame.pack(side=LEFT)
+
+right_frame = Frame(root, bd=15, relief=RIDGE, bg='red4')
+right_frame.pack(side=RIGHT)
+
+calculator_frame = Frame(right_frame, bd=1, relief=RIDGE, bg='red4')
+calculator_frame.pack(side=TOP)
+
+reciept_frame = Frame(right_frame, bd=4, relief=RIDGE, bg='red4')
+reciept_frame.pack()
+
+button_frame = Frame(right_frame, bd=3, relief=RIDGE,bg='red4')
+button_frame.pack()
+
+#variables
+#check button variables
+
+var1 = IntVar()
+var2 = IntVar()
+var3 = IntVar()
+var4 = IntVar()
+var5 = IntVar()
+var6 = IntVar()
+var7 = IntVar()
+var8 = IntVar()
+var9 = IntVar()
+var10 = IntVar()
+var11 = IntVar()
+var12 = IntVar()
+var13 = IntVar()
+var14 = IntVar()
+var15 = IntVar()
+var16 = IntVar()
+var17 = IntVar()
+var18 = IntVar()
+var19 = IntVar()
+var20 = IntVar()
+var21 = IntVar()
+var22 = IntVar()
+var23 = IntVar()
+var24 = IntVar()
+var25 = IntVar()
+var26 = IntVar()
+var27 = IntVar()
+
+#entry field variables
+#for food
+e_roti = StringVar()
+e_daal = StringVar()
+e_sabji = StringVar()
+e_chawal = StringVar()
+e_fish = StringVar()
+e_mutton = StringVar()
+e_kebab = StringVar()
+e_chicken = StringVar()
+e_paneer = StringVar()
+
+#for drinks
+e_lassi = StringVar()
+e_coffee = StringVar()
+e_faluda = StringVar()
+e_lemonade = StringVar()
+e_roohafza = StringVar()
+e_masala_tea = StringVar()
+e_badammilk = StringVar()
+e_cold_drinks = StringVar()
+e_jaljeera = StringVar()
+
+#for cakes
+e_oreo = StringVar()
+e_kitkat = StringVar()
+e_vanilla = StringVar()
+e_apple = StringVar()
+e_black_forest = StringVar()
+e_banana = StringVar()
+e_red_valvet = StringVar()
+e_pineapple = StringVar()
+e_chocolate = StringVar()
+
+#to add '0' initially in entry fields
+
+e_roti.set('0')
+e_daal.set('0')
+e_fish.set('0')
+e_sabji.set('0')
+e_kebab.set('0')
+e_chawal.set('0')
+e_mutton.set('0')
+e_paneer.set('0')
+e_chicken.set('0')
+
+e_lassi.set('0')
+e_coffee.set('0')
+e_faluda.set('0')
+e_lemonade.set('0')
+e_roohafza.set('0')
+e_masala_tea.set('0')
+e_badammilk.set('0')
+e_cold_drinks.set('0')
+e_jaljeera.set('0')
+
+e_oreo.set('0')
+e_kitkat.set('0')
+e_vanilla.set('0')
+e_apple.set('0')
+e_black_forest.set('0')
+e_banana.set('0')
+e_red_valvet.set('0')
+e_pineapple.set('0')
+e_chocolate.set('0')
+
+#variables for entry field in cost frame
+
+cost_of_food_var = StringVar()
+cost_of_drinks_var = StringVar()
+cost_of_cakes_var = StringVar()
+sub_total_var = StringVar()
+service_tax_var = StringVar()
+total_cost_var = StringVar()
+
+#FOOD
+
+roti = Checkbutton(food_frame, text='Roti-10', font=('arial', 18, 'bold'), onvalue=1, offvalue=0, variable=var1, command=roti)
+roti.grid(row=0, column=0, sticky=W)
+
+daal = Checkbutton(food_frame, text='Daal-60', font=('arial', 18, 'bold'), onvalue=1, offvalue=0, variable=var2, command=daal)
+daal.grid(row=1, column=0, sticky=W)
+
+fish = Checkbutton(food_frame, text='Fish-100', font=('arial', 18, 'bold'), onvalue=1, offvalue=0, variable=var3, command=fish)
+fish.grid(row=2, column=0, sticky=W)
+
+sabji = Checkbutton(food_frame, text='Sabji-50', font=('arial', 18, 'bold'), onvalue=1, offvalue=0, variable=var4, command=sabji)
+sabji.grid(row=3, column=0, sticky=W)
+
+kebab = Checkbutton(food_frame, text='Kebab-40', font=('arial', 18, 'bold'), onvalue=1, offvalue=0, variable=var5, command=kebab)
+kebab.grid(row=4, column=0, sticky=W)
+
+chawal = Checkbutton(food_frame, text='Chawal-30', font=('arial', 18, 'bold'), onvalue=1, offvalue=0, variable=var6, command=chawal)
+chawal.grid(row=5, column=0, sticky=W)
+
+mutton = Checkbutton(food_frame, text='Mutton - 12', font=('arial', 18, 'bold'), onvalue=1, offvalue=0, variable=var7, command=mutton)
+mutton.grid(row=6, column=0, sticky=W)
+
+paneer = Checkbutton(food_frame, text='Paneer - 100', font=('arial', 18, 'bold'), onvalue=1, offvalue=0, variable=var8, command=paneer)
+paneer.grid(row=7, column=0, sticky=W)
+
+chicken = Checkbutton(food_frame, text='Chicken - 120', font=('arial', 18, 'bold'), onvalue=1, offvalue=0, variable=var9,command=chicken)
+chicken.grid(row=8, column=0, sticky=W)
+
+#Entry fields for food items
+
+text_roti = Entry(food_frame, font=('arial', 18, 'bold'), bd=7, width=6, state=DISABLED, textvariable=e_roti)
+text_roti.grid(row=0, column=1)
+
+text_daal = Entry(food_frame, font=('arial', 18, 'bold'), bd=7, width=6, state=DISABLED, textvariable=e_daal)
+text_daal.grid(row=1, column=1)
+
+text_fish = Entry(food_frame, font=('arial', 18, 'bold'), bd=7, width=6, state=DISABLED, textvariable=e_fish)
+text_fish.grid(row=2, column=1)
+
+text_sabji = Entry(food_frame, font=('arial', 18, 'bold'), bd=7, width=6, state=DISABLED, textvariable=e_sabji)
+text_sabji.grid(row=3, column=1)
+
+text_kebab = Entry(food_frame, font=('arial', 18, 'bold'), bd=7, width=6, state=DISABLED, textvariable=e_kebab)
+text_kebab.grid(row=4, column=1)
+
+text_chawal = Entry(food_frame, font=('arial', 18, 'bold'), bd=7, width=6, state=DISABLED, textvariable=e_chawal)
+text_chawal.grid(row=5, column=1)
+
+text_mutton = Entry(food_frame, font=('arial', 18, 'bold'), bd=7, width=6, state=DISABLED, textvariable=e_mutton)
+text_mutton.grid(row=6, column=1)
+
+text_paneer = Entry(food_frame, font=('arial', 18, 'bold'), bd=7, width=6, state=DISABLED, textvariable=e_paneer)
+text_paneer.grid(row=7, column=1)
+
+text_chicken = Entry(food_frame, font=('arial', 18, 'bold'), bd=7, width=6, state=DISABLED, textvariable=e_chicken)
+text_chicken.grid(row=8, column=1)
+
+#drinks
+
+lassi = Checkbutton(drinks_frame, text='Lassi-50', font=('arial', 18, 'bold'), onvalue=1, offvalue=0, variable=var10, command=lassi)
+lassi.grid(row=0, column=0, sticky=W)
+
+coffee = Checkbutton(drinks_frame, text='Coffee-40', font=('arial', 18, 'bold'), onvalue=1, offvalue=0, variable=var11, command=coffee)
+coffee.grid(row=1, column=0, sticky=W)
+
+faluda = Checkbutton(drinks_frame, text='Faluda-80', font=('arial', 18, 'bold'), onvalue=1, offvalue=0, variable=var12, command=faluda)
+faluda.grid(row=2, column=0, sticky=W)
+
+lemonade = Checkbutton(drinks_frame, text='Lemonade-30', font=('arial', 18, 'bold'), onvalue=1, offvalue=0, variable=var13,command=lemonade)
+lemonade.grid(row=3, column=0, sticky=W)
+
+jaljeera = Checkbutton(drinks_frame, text='Jaljeera-40', font=('arial', 18, 'bold'), onvalue=1, offvalue=0, variable=var14, command=jaljeera)
+jaljeera.grid(row=4, column=0, sticky=W)
+
+roohafza = Checkbutton(drinks_frame, text='Roohafza-60', font=('arial', 18, 'bold'), onvalue=1, offvalue=0, variable=var15, command=roohafza)
+roohafza.grid(row=5, column=0, sticky=W)
+
+masala_tea = Checkbutton(drinks_frame, text='Masala Tea-20', font=('arial', 18, 'bold'), onvalue=1, offvalue=0, variable=var16, command=masala_tea)
+masala_tea.grid(row=6, column=0, sticky=W)
+
+badammilk = Checkbutton(drinks_frame, text='Badam Milk-50', font=('arial', 18, 'bold'), onvalue=1, offvalue=0, variable=var17, command=badam_milk)
+badammilk.grid(row=7, column=0, sticky=W)
+
+cold_drinks = Checkbutton(drinks_frame, text='Cold Drinks-80', font=('arial', 18, 'bold'), onvalue=1, offvalue=0, variable=var18, command=cold_drinks)
+cold_drinks.grid(row=8, column=0, sticky=W)
+
+#entry fields for drinks items
+
+text_lassi = Entry(drinks_frame, font=('arial', 18, 'bold'), bd=7, width=6, state=DISABLED, textvariable=e_lassi)
+text_lassi.grid(row=0, column=1)
+
+text_coffee = Entry(drinks_frame, font=('arial', 18, 'bold'), bd=7, width=6, state=DISABLED, textvariable=e_coffee)
+text_coffee.grid(row=1, column=1)
+
+text_faluda = Entry(drinks_frame, font=('arial', 18, 'bold'), bd=7, width=6, state=DISABLED, textvariable=e_faluda)
+text_faluda.grid(row=2, column=1)
+
+text_lemonade = Entry(drinks_frame, font=('arial', 18, 'bold'), bd=7, width=6, state=DISABLED, textvariable=e_lemonade)
+text_lemonade.grid(row=3, column=1)
+
+text_jaljeera = Entry(drinks_frame, font=('arial', 18, 'bold'), bd=7, width=6, state=DISABLED, textvariable=e_jaljeera)
+text_jaljeera.grid(row=4, column=1)
+
+text_roohafza = Entry(drinks_frame, font=('arial', 18, 'bold'), bd=7, width=6, state=DISABLED, textvariable=e_roohafza)
+text_roohafza.grid(row=5, column=1)
+
+text_masala_tea = Entry(drinks_frame, font=('arial', 18, 'bold'), bd=7, width=6, state=DISABLED, textvariable=e_masala_tea)
+text_masala_tea.grid(row=6, column=1)
+
+text_badammilk = Entry(drinks_frame, font=('arial', 18, 'bold'), bd=7, width=6, state=DISABLED, textvariable=e_badammilk)
+text_badammilk.grid(row=7, column=1)
+
+text_cold_drinks = Entry(drinks_frame, font=('arial', 18, 'bold'), bd=7, width=6, state=DISABLED, textvariable=e_cold_drinks)
+text_cold_drinks.grid(row=8, column=1)
+
+#cakes
+
+oreo_cake = Checkbutton(cakes_frame, text='Oreo-400', font=('arial', 18, 'bold'), onvalue=1, offvalue=0, variable=var19, command=oreo)
+oreo_cake.grid(row=0, column=0, sticky=W)
+
+apple_cake = Checkbutton(cakes_frame, text='Apple-300', font=('arial', 18, 'bold'), onvalue=1, offvalue=0, variable=var20,command=apple)
+apple_cake.grid(row=1, column=0, sticky=W)
+
+kitkat_cake = Checkbutton(cakes_frame, text='Kitkat-500', font=('arial', 18, 'bold'), onvalue=1, offvalue=0, variable=var21, command=kitkat)
+kitkat_cake.grid(row=2, column=0, sticky=W)
+
+vanilla_cake = Checkbutton(cakes_frame, text='Vanilla-550', font=('arial', 18, 'bold'), onvalue=1, offvalue=0, variable=var22, command=vanilla)
+vanilla_cake.grid(row=3, column=0, sticky=W)
+
+banana_cake = Checkbutton(cakes_frame, text='Banana-450', font=('arial', 18, 'bold'), onvalue=1, offvalue=0, variable=var23, command=banana)
+banana_cake.grid(row=4, column=0, sticky=W)
+
+red_valvet_cake = Checkbutton(cakes_frame, text='Red Valvet-800', font=('arial', 18, 'bold'), onvalue=1, offvalue=0, variable=var24, command=red_valvet)
+red_valvet_cake.grid(row=5, column=0, sticky=W)
+
+pineapple_cake = Checkbutton(cakes_frame, text='Pineapple-620', font=('arial', 18, 'bold'), onvalue=1, offvalue=0, variable=var25, command=pineapple)
+pineapple_cake.grid(row=6, column=0, sticky=W)
+
+chocolate_cake = Checkbutton(cakes_frame, text='Chocolate-700', font=('arial', 18, 'bold'), onvalue=1, offvalue=0, variable=var26, command=chocolate)
+chocolate_cake.grid(row=7, column=0, sticky=W)
+
+black_forest_cake = Checkbutton(cakes_frame, text='Black Forest-550', font=('arial', 18, 'bold'), onvalue=1, offvalue=0, variable=var27, command=black_forest)
+black_forest_cake.grid(row=8, column=0, sticky=W)
+
+#entry fields for cakes
+
+text_oreo = Entry(cakes_frame, font=('arial', 18, 'bold'), bd=7, width=6, state=DISABLED, textvariable=e_oreo)
+text_oreo.grid(row=0, column=1)
+
+text_apple = Entry(cakes_frame, font=('arial', 18, 'bold'), bd=7, width=6, state=DISABLED, textvariable=e_apple)
+text_apple.grid(row=1, column=1)
+
+text_kitkat = Entry(cakes_frame, font=('arial', 18, 'bold'), bd=7, width=6, state=DISABLED, textvariable=e_kitkat)
+text_kitkat.grid(row=2, column=1)
+
+text_vanilla = Entry(cakes_frame, font=('arial', 18, 'bold'), bd=7, width=6, state=DISABLED, textvariable=e_vanilla)
+text_vanilla.grid(row=3, column=1)
+
+text_banana = Entry(cakes_frame, font=('arial', 18, 'bold'), bd=7, width=6, state=DISABLED, textvariable=e_banana)
+text_banana.grid(row=4, column=1)
+
+text_red_valvet = Entry(cakes_frame, font=('arial', 18, 'bold'), bd=7, width=6, state=DISABLED, textvariable=e_red_valvet)
+text_red_valvet.grid(row=5, column=1)
+
+text_pineapple = Entry(cakes_frame, font=('arial', 18, 'bold'), bd=7, width=6, state=DISABLED, textvariable=e_pineapple)
+text_pineapple.grid(row=6, column=1)
+
+text_chocolate = Entry(cakes_frame, font=('arial', 18, 'bold'), bd=7, width=6, state=DISABLED, textvariable=e_chocolate)
+text_chocolate.grid(row=7, column=1)
+
+text_black_forest = Entry(cakes_frame, font=('arial', 18, 'bold'), bd=7, width=6, state=DISABLED, textvariable=e_black_forest)
+text_black_forest.grid(row=8, column=1)
+
+#cost labels and entry fields
+
+label_cost_of_food = Label(cost_frame, text='Cost Of Food', font=('arial', 16, 'bold'), bg='firebrick4', fg='white')
+label_cost_of_food.grid(row=0, column=0)
+
+text_cost_of_food = Entry(cost_frame, font=('arial', 16, 'bold'), bd=6, width=14, state='readonly',textvariable=cost_of_food_var)
+text_cost_of_food.grid(row=0, column=1, padx=41)
+
+label_cost_of_drinks = Label(cost_frame, text='Cost Of Drinks', font=('arial', 16, 'bold'), bg='firebrick4', fg='white')
+label_cost_of_drinks.grid(row=1, column=0)
+
+text_cost_of_drinks = Entry(cost_frame, font=('arial', 16, 'bold'), bd=6, width=14, state='readonly', textvariable=cost_of_drinks_var)
+text_cost_of_drinks.grid(row=1, column=1, padx=41)
+
+label_cost_of_cakes = Label(cost_frame, text='Cost Of Cakes', font=('arial', 16, 'bold'), bg='firebrick4', fg='white')
+label_cost_of_cakes.grid(row=2, column=0)
+
+text_cost_of_cakes = Entry(cost_frame, font=('arial', 16, 'bold'), bd=6, width=14, state='readonly', textvariable=cost_of_cakes_var)
+text_cost_of_cakes.grid(row=2, column=1, padx=41)
+
+label_sub_total = Label(cost_frame, text='Sub Total', font=('arial', 16, 'bold'), bg='firebrick4', fg='white')
+label_sub_total.grid(row=0, column=2)
+
+text_sub_total = Entry(cost_frame, font=('arial', 16, 'bold'), bd=6, width=14, state='readonly', textvariable=sub_total_var)
+text_sub_total.grid(row=0, column=3, padx=41)
+
+label_service_tax = Label(cost_frame, text='Service Tax', font=('arial', 16, 'bold'), bg='firebrick4', fg='white')
+label_service_tax.grid(row=1, column=2)
+
+text_service_tax = Entry(cost_frame, font=('arial', 16, 'bold'), bd=6, width=14, state='readonly', textvariable=service_tax_var)
+text_service_tax.grid(row=1, column=3, padx=41)
+
+label_total_cost = Label(cost_frame, text='Total Cost', font=('arial', 16, 'bold'), bg='firebrick4', fg='white')
+label_total_cost.grid(row=2, column=2)
+
+text_total_cost = Entry(cost_frame, font=('arial', 16, 'bold'), bd=6, width=14, state='readonly', textvariable=total_cost_var)
+text_total_cost.grid(row=2, column=3, padx=41)
+
+#Buttons
+
+buttonTotal = Button(button_frame, text='Total', font=('arial', 14, 'bold'), fg='white', bg='red4', bd=3, command=total_cost)
+buttonTotal.grid(row=0, column=0)
+
+buttonReceipt = Button(button_frame, text='Receipt', font=('arial', 14, 'bold'), fg='white', bg='red4', bd=3, command=receipt)
+buttonReceipt.grid(row=0, column=1)
+
+buttonSave = Button(button_frame, text='Save', font=('arial', 14, 'bold'), fg='white', bg='red4', bd=3, command=save)
+buttonSave.grid(row=0, column=2)
+
+buttonSend = Button(button_frame, text='Send', font=('arial', 14, 'bold'), fg='white', bg='red4', bd=3, command=send,)
+buttonSend.grid(row=0, column=3)
+
+buttonReset = Button(button_frame, text='Reset', font=('arial', 14, 'bold'), fg='white', bg='red4', bd=3, command=reset)
+buttonReset.grid(row=0, column=4)
+
+# textarea for receipt
+
+textReceipt = Text(reciept_frame, font=('arial', 12, 'bold'), bd=3, width=42, height=14)
+textReceipt.grid(row=0, column=0)
+
+#calculator
+
+root.mainloop()
